@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/databrary/databrary/util"
+	"github.com/databrary/databrary-backend-go/util"
 	"github.com/pkg/errors"
 )
 

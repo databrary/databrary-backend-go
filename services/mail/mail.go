@@ -2,7 +2,7 @@ package mail
 
 import (
 	"fmt"
-	"github.com/databrary/databrary/config"
+	"github.com/databrary/databrary-backend-go/config"
 	"github.com/go-gomail/gomail"
 	"github.com/matcornic/hermes"
 	"os"

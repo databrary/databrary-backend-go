@@ -2,9 +2,9 @@ package routes
 
 import (
 	"fmt"
-	"github.com/databrary/databrary/config"
-	"github.com/databrary/databrary/logging"
-	"github.com/databrary/databrary/util"
+	"github.com/databrary/databrary-backend-go/config"
+	"github.com/databrary/databrary-backend-go/logging"
+	"github.com/databrary/databrary-backend-go/util"
 	"github.com/databrary/scs/session"
 	"net/http"
 )

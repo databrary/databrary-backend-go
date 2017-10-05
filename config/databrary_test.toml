@@ -9,5 +9,5 @@ port = "5432"
 user = "postgres"
 password = "mysecretpassword"
 sslmode = "disable"
-schema = "/home/maksim/dev_projects/go/src/github.com/databrary/databrary/db/schema/master_sql"
+schema = "/home/maksim/dev_projects/go/src/github.com/databrary/databrary-backend-go/db/schema/master_sql"
 

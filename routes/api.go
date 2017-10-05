@@ -3,11 +3,11 @@ package routes
 
 import (
 	"encoding/json"
-	"github.com/databrary/databrary/db"
-	"github.com/databrary/databrary/db/models/sqlboiler_models/public"
-	"github.com/databrary/databrary/logging"
-	"github.com/databrary/databrary/services/mail"
-	"github.com/databrary/databrary/util"
+	"github.com/databrary/databrary-backend-go/db"
+	"github.com/databrary/databrary-backend-go/db/models/sqlboiler_models/public"
+	"github.com/databrary/databrary-backend-go/logging"
+	"github.com/databrary/databrary-backend-go/services/mail"
+	"github.com/databrary/databrary-backend-go/util"
 	"github.com/databrary/sqlboiler/queries/qm"
 	"github.com/jmoiron/sqlx"
 	"github.com/pressly/chi"

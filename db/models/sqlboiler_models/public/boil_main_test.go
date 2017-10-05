@@ -77,7 +77,7 @@ func initViper() error {
 	GOPATH := os.Getenv("GOPATH")
 	// don't get smart and change sqlboiler.toml to config.toml or something because you won't be able
 	// to regen models using sqlboiler executable
-	configPath := filepath.Join(GOPATH, "src/github.com/databrary/databrary/config/sqlboiler/sqlboiler.toml")
+	configPath := filepath.Join(GOPATH, "src/github.com/databrary/databrary-backend-go/config/sqlboiler/sqlboiler.toml")
 	viper.SetConfigFile(configPath)
 	err := viper.ReadInConfig()
 	return err

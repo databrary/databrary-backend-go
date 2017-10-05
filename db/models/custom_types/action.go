@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"database/sql/driver"
 
-	"github.com/databrary/databrary/logging"
+	"github.com/databrary/databrary-backend-go/logging"
 	set "github.com/deckarep/golang-set"
 	"github.com/pkg/errors"
 )

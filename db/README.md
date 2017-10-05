@@ -21,7 +21,7 @@ The schema are a set of sql files that function as migrations; `0.sql` is the or
 by querying the database itself and constructing the models therefrom. This is what has been used to generate the models
 here. The version of sqlboiler though has been heavily modified to enable use of "custom types". The forked version is @
 [makslevental/sqlboiler](https://github.com/makslevental/sqlboiler). In addition to modifying sqlboiler the templates
-used to generate the source files have been modified as well. They are @ [config/sqlboiler/templates](https://github.com/databrary/databrary/tree/go_models/config/sqlboiler/templates).
+used to generate the source files have been modified as well. They are @ [config/sqlboiler/templates](https://github.com/databrary/databrary-backend-go/tree/go_models/config/sqlboiler/templates).
 
 On changing the schema for the database all of the models should be regenerated. Note this will require finessing since
 sqlboiler and the stock templates have been heavily modified. There are plans to make this easier.

@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"fmt"
-	"github.com/databrary/databrary/util"
+	"github.com/databrary/databrary-backend-go/util"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
 	"github.com/pkg/errors"

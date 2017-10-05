@@ -2,7 +2,7 @@
 package xo_models
 
 import (
-	"github.com/databrary/databrary/db/models/custom_types"
+	"github.com/databrary/databrary-backend-go/db/models/custom_types"
 	"github.com/databrary/sqlboiler/boil"
 )
 

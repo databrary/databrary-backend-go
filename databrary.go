@@ -22,12 +22,12 @@ import (
 	"path/filepath"
 
 	"fmt"
-	"github.com/databrary/databrary/config"
-	"github.com/databrary/databrary/db"
-	"github.com/databrary/databrary/logging"
-	"github.com/databrary/databrary/routes"
-	"github.com/databrary/databrary/services/redis"
-	"github.com/databrary/databrary/services/sessions"
+	"github.com/databrary/databrary-backend-go/config"
+	"github.com/databrary/databrary-backend-go/db"
+	"github.com/databrary/databrary-backend-go/logging"
+	"github.com/databrary/databrary-backend-go/routes"
+	"github.com/databrary/databrary-backend-go/services/redis"
+	"github.com/databrary/databrary-backend-go/services/sessions"
 	"github.com/databrary/sqlboiler/boil"
 	"github.com/pressly/chi"
 	"github.com/pressly/chi/docgen"
@@ -47,7 +47,7 @@ var (
 
 // initialize all of the auxiliary services
 func init() {
-	goPaths := strings.Split(filepath.Join(os.Getenv("GOPATH"), "src/github.com/databrary/databrary/"), ":")
+	goPaths := strings.Split(filepath.Join(os.Getenv("GOPATH"), "src/github.com/databrary/databrary-backend-go/"), ":")
 	// if there's a vendor directory then there will be two gopaths (that's how vendoring works). we want the second one
 	// which is the actual gopath
 	if len(goPaths) == 2 {

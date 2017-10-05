@@ -6,7 +6,7 @@ package public
 
 import (
 	"bytes"
-	"github.com/databrary/databrary/db/models/custom_types"
+	"github.com/databrary/databrary-backend-go/db/models/custom_types"
 	"github.com/databrary/sqlboiler/boil"
 	"github.com/databrary/sqlboiler/randomize"
 	"github.com/databrary/sqlboiler/strmangle"

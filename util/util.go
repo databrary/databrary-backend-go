@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"encoding/json"
-	"github.com/databrary/databrary/logging"
+	"github.com/databrary/databrary-backend-go/logging"
 	"net/http"
 )
 

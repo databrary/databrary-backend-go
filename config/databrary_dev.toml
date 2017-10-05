@@ -9,11 +9,11 @@ port = "5432"
 user = "postgres"
 password = "mysecretpassword"
 sslmode = "disable"
-schema = "src/github.com/databrary/databrary/db/schema/master_sql"
+schema = "src/github.com/databrary/databrary-backend-go/db/schema/master_sql"
 
 [ssl]
-cert = "/home/maksim/go/src/github.com/databrary/databrary/config/ssl/cert.pem"
-key = "/home/maksim/go/src/github.com/databrary/databrary/config/ssl/key.pem"
+cert = "/home/maksim/go/src/github.com/databrary/databrary-backend-go/config/ssl/cert.pem"
+key = "/home/maksim/go/src/github.com/databrary/databrary-backend-go/config/ssl/key.pem"
 
 [redis]
 address = "localhost:6379"

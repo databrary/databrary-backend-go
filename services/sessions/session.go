@@ -5,9 +5,9 @@ import (
 
 	"time"
 
-	"github.com/databrary/databrary/logging"
-	"github.com/databrary/databrary/services/redis"
-	"github.com/databrary/databrary/util"
+	"github.com/databrary/databrary-backend-go/logging"
+	"github.com/databrary/databrary-backend-go/services/redis"
+	"github.com/databrary/databrary-backend-go/util"
 	"github.com/databrary/scs/session"
 	"github.com/sirupsen/logrus"
 )

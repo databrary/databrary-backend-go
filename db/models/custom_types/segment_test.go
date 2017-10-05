@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/databrary/databrary/config"
-	"github.com/databrary/databrary/db"
+	"github.com/databrary/databrary-backend-go/config"
+	"github.com/databrary/databrary-backend-go/db"
 	"github.com/jmoiron/sqlx"
 	"os"
 	"path/filepath"
@@ -16,7 +16,7 @@ var dbConn *sqlx.DB
 func TestSegment(t *testing.T) {
 	var err error
 	GOPATH := os.Getenv("GOPATH")
-	config.InitConf(filepath.Join(GOPATH, "src/github.com/databrary/databrary/config/databrary_test.toml"))
+	config.InitConf(filepath.Join(GOPATH, "src/github.com/databrary/databrary-backend-go/config/databrary_test.toml"))
 	conf := config.GetConf()
 	// initialize db connection
 	err = db.InitDB(conf)
@@ -648,7 +648,7 @@ func testSegment_Minus(t *testing.T) {
 func testSegment_Scan(t *testing.T) {
 	var err error
 	GOPATH := os.Getenv("GOPATH")
-	config.InitConf(filepath.Join(GOPATH, "src/github.com/databrary/databrary/config/databrary_test.toml"))
+	config.InitConf(filepath.Join(GOPATH, "src/github.com/databrary/databrary-backend-go/config/databrary_test.toml"))
 	conf := config.GetConf()
 	err = db.InitDB(conf)
 	if err != nil {

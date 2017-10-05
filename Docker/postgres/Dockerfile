@@ -3,10 +3,10 @@ ENV POSTGRES_PASSWORD mysecretpassword
 RUN apt-get update
 RUN apt-get install -y libpq-dev postgresql-server-dev-all git gcc
 WORKDIR /usr/local/src
-RUN git clone git://github.com/databrary/databrary
+RUN git clone https://github.com/databrary/databrary-backend-go
 WORKDIR databrary
 # TODO: set this to databrary_go eventually
-ARG commit=origin/go_master
+ARG commit=origin/master
 RUN git remote update && git checkout $commit
 RUN make -C pgranges install
 

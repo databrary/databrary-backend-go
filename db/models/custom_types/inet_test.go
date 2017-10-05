@@ -10,8 +10,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/databrary/databrary/config"
-	"github.com/databrary/databrary/db"
+	"github.com/databrary/databrary-backend-go/config"
+	"github.com/databrary/databrary-backend-go/db"
 	"github.com/jmoiron/sqlx"
 )
 
@@ -20,7 +20,7 @@ var connInet *sqlx.DB
 func TestInet(t *testing.T) {
 	var err error
 	GOPATH := os.Getenv("GOPATH")
-	config.InitConf(filepath.Join(GOPATH, "src/github.com/databrary/databrary/config/databrary_test.toml"))
+	config.InitConf(filepath.Join(GOPATH, "src/github.com/databrary/databrary-backend-go/config/databrary_test.toml"))
 	conf := config.GetConf()
 	// initialize db connection
 	err = db.InitDB(conf)

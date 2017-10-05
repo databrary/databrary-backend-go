@@ -207,7 +207,7 @@
 
 [[projects]]
   name = "github.com/pressly/chi"
-  packages = [".","middleware"]
+  packages = [".","docgen","middleware"]
   revision = "e6033ea75479391a4bce3918fc119cad31e1cb30"
   version = "v2.1.0"
 
@@ -364,6 +364,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "31e736abad93f7c3e8b8a56eba18b1935e8e4539d32511999fd2f2f6a454e331"
+  inputs-digest = "9f1367447b966701003cba6d21c07a942df99178fc7e153083cf33f2843ab771"
   solver-name = "gps-cdcl"
   solver-version = 1

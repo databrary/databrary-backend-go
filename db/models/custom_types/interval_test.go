@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/databrary/databrary/config"
-	"github.com/databrary/databrary/db"
+	"github.com/databrary/databrary-backend-go/config"
+	"github.com/databrary/databrary-backend-go/db"
 	"github.com/jmoiron/sqlx"
 )
 
@@ -16,7 +16,7 @@ var connInterval *sqlx.DB
 
 func TestInterval(t *testing.T) {
 	GOPATH := os.Getenv("GOPATH")
-	config.InitConf(filepath.Join(GOPATH, "src/github.com/databrary/databrary/config/databrary_test.toml"))
+	config.InitConf(filepath.Join(GOPATH, "src/github.com/databrary/databrary-backend-go/config/databrary_test.toml"))
 	conf := config.GetConf()
 	var err error
 	// initialize db connection
