@@ -119,9 +119,9 @@ I highly highly recommend [Gogland](https://www.jetbrains.com/go/) as a go ide.
 First start the docker
 
 ```
-go get -u github.com/databrary/databrary
-cd ~/go/src/github.com/databrary/databrary
-git checkout go_master
+go get -u github.com/databrary/databrary-backend-go
+cd ~/go/src/github.com/databrary/databrary-backend-go
+git checkout master
 dep ensure
 go build
 
