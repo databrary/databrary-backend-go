@@ -4,7 +4,7 @@ RUN apt-get update
 RUN apt-get install -y libpq-dev postgresql-server-dev-all git gcc
 WORKDIR /usr/local/src
 RUN git clone https://github.com/databrary/databrary-backend-go
-WORKDIR databrary
+WORKDIR databrary-backend-go
 # TODO: set this to databrary_go eventually
 ARG commit=origin/master
 RUN git remote update && git checkout $commit
