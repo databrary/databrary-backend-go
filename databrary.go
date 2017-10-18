@@ -41,8 +41,8 @@ import (
 )
 
 var (
-	proj_root   string
-	config_path *string
+	projRoot   string
+	configPath *string
 )
 
 // initialize all of the auxiliary services
@@ -51,15 +51,15 @@ func init() {
 	// if there's a vendor directory then there will be two gopaths (that's how vendoring works). we want the second one
 	// which is the actual gopath
 	if len(goPaths) == 2 {
-		proj_root = goPaths[1]
+		projRoot = goPaths[1]
 	} else if len(goPaths) == 1 {
-		proj_root = goPaths[0]
+		projRoot = goPaths[0]
 	} else {
 		panic(fmt.Sprintf("unexpected gopath %#v", goPaths))
 	}
 
-	config_path = kingpin.Flag("config", "Path to config file").
-		Default(filepath.Join(proj_root, "config/databrary_dev.toml")).
+	configPath = kingpin.Flag("config", "Path to config file").
+		Default(filepath.Join(projRoot, "config/databrary_dev.toml")).
 		Short('c').
 		String()
 
@@ -67,10 +67,10 @@ func init() {
 	kingpin.Version("0.0.0")
 	kingpin.Parse()
 
-	if config_path, err := filepath.Abs(*config_path); err != nil {
+	if configPath, err := filepath.Abs(*configPath); err != nil {
 		panic("command line config file path error")
 	} else {
-		log.InitLgr(config.InitConf(config_path))
+		log.InitLgr(config.InitConf(configPath))
 	}
 
 	// initialize db connection
@@ -151,7 +151,7 @@ func main() {
 	r.FileServer("/public", http.Dir("public"))
 
 	// generate the api docs (stored in api.md)
-	GenerateApi(r)
+	GenerateAPI(r)
 
 	// the only reason that there's an address config is because static emails are generated with that address
 	// embedded in them
@@ -164,15 +164,15 @@ func main() {
 	panic(err)
 }
 
-func GenerateApi(r chi.Router) {
+func GenerateAPI(r chi.Router) {
 	m := docgen.MarkdownOpts{
-		ProjectPath:        "github.com/databrary/databrary",
+		ProjectPath:        "github.com/databrary/databrary-backend-go",
 		Intro:              "Databrary 2.0 API",
 		ForceRelativeLinks: true,
 	}
 	// skip documenting middleware
 	re := regexp.MustCompile(`^- \[`)
-	f, _ := os.Create(filepath.Join(proj_root, "api.md"))
+	f, _ := os.Create(filepath.Join(projRoot, "api.md"))
 	defer f.Close()
 	docs := docgen.MarkdownRoutesDoc(r, m)
 	for _, v := range strings.Split(docs, "\n") {

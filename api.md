@@ -1,4 +1,4 @@
-# github.com/databrary/databrary
+# github.com/databrary/databrary-backend-go
 
 Databrary 2.0 API
 
